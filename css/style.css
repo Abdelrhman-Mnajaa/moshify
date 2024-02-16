@@ -105,7 +105,7 @@ white-space: nowrap;
     
 }
 
-@media screen and (max-length:1024px){
+@media screen and (min-width:1024px){
 .bages{
     font-size: 1.5rem;
 }
@@ -115,5 +115,41 @@ white-space: nowrap;
     
 }
 
-
 }
+ /*List*/
+    /*List be plain list of object*/
+    
+    .list{
+    list-style: none;
+    padding-left: 0;
+    color:var(--color-headings);
+}
+
+
+.list--inline .list__item{
+    display: inline-block;
+    margin-right:2rem;
+}
+
+/*new class or new skin for list style image */
+.list--tick{
+    list-style-image: url(../images/tick.svg);
+    padding-left: 3rem;
+}
+
+/*new rule skin for list style image */
+
+.list--tick .list__item{
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (min-width:1024px) {
+
+   .list--tick .list__item{
+    padding-left: 0;
+   } 
+}
+
+
