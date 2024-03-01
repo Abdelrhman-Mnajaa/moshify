@@ -8,6 +8,8 @@ html{
     --color-accent:#ff6400;
     --color-headings:#1b0760;
     --color-body:#918ca4;
+    --color-border:#ccc;
+    --border-radius:30px;
 }
 
 *,*::after,*::before{
@@ -239,8 +241,8 @@ text-align: center;
 }
 
 .input{
-    border-radius:30px;
-    border:1px solid #ccc;
+    border-radius:var(--border-radius);
+    border:1px solid var(--color-border);
     color:var(--color-headings);
     font-size: 2rem;
     outline:0;
@@ -254,4 +256,45 @@ text-align: center;
     .input{
         font-size:1.5rem;
     }
+}
+
+.input-group{
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    display: flex;
+
+
+}
+
+.input-group .input{
+border:0;
+flex-grow: 1;
+padding:1.5rem 1rem;
+}
+.input-group .btn{
+margin: 4px;
+}
+/* card */
+
+.card{
+    border-radius:10px;
+    box-shadow: 0 0 20px 10px #f3f3f3 ;
+    overflow: hidden;
+}
+.card__header,.card__body{
+    padding:2rem 3rem;
+
+}
+
+
+.card--primary .card__header{
+    color: #fff;
+    background-color: var(--color-primary);
+}
+
+.card--secondary .card__header{
+    color: #fff;
+    background-color: var(--color-secondary);
+    
 }
